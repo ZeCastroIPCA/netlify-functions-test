@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* MUTED COLORS */
+  --white: #fff;
+  --whitesmoke: #f5f5f5;
+  --lighter-gray: #eaeaea;
+  --light-gray: #dedede;
+  --gray: #b4b4b4;
+  --grayish: #676767;
+  --dark-gray: #434343;
+  --black: #202020;
+
+  /* COLORS */
+  --green: #288d52;
+  --red: #be3939;
+  --yellow: #f5c518;
+  --orange: #fc6e51;
+  --teal: #19807b;
+  --blue: #0071e3;
+  --light-blue: #00a0e3;
+  --purple: #ac92ec;
+  --pink: #f7a8b8;
+  --transparent: transparent;
+  --darkened-background: rgba(0, 0, 0, 0.5);
+  --dark-shadow: rgba(0, 0, 0, 0.3);
+  --shadow: rgba(0, 0, 0, 0.2);
+  --light-shadow: rgba(0, 0, 0, 0.08);
+
+  /* FONTS */
+  --font-family: "Montserrat", sans-serif;
+  /* FONT SIZES */
+  --font-size-title: 4rem;
+  --font-size-subtitle: 1.3rem;
+  --font-size-text: 1.1rem;
+  --font-size-small: 0.9rem;
+  --font-size-email: 2rem;
+  --font-size-faq: 1.7rem;
+  /* FONT WEIGHTS */
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  /* BORDER RADIUS */
+  --border-radius-button: 10rem;
+  --border-radius-input: 1rem;
+
+  /* TRANSITIONS */
+  --fast-transition: 0.1s;
+  --transition: 0.2s;
+  --loading-transition: 1s;
+  --slow-transition: 0.5s;
+
+  /* TEXT SPACING */
+  --line-height: 1.5;
+  --letter-spacing: 0.02em;
+}
+
+/* DEFAULTS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black);
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  color: var(--black);
+}
+
+img {
+  pointer-events: none;
+}
+
+button {
+  border-radius: var(--border-radius-button);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-semi-bold);
+  transition: var(--transition);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--teal);
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 1px var(--shadow);
+  border-radius: var(--border-radius-input);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-light);
+  transition: var(--transition);
+}
+
+input:focus-visible {
+  box-shadow: 0 0 0 0.2rem var(--teal);
+}
+
+textarea {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 1px var(--shadow);
+  border-radius: var(--border-radius-input);
+  padding: 1rem;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-light);
+  transition: var(--transition);
+}
+
+textarea:focus-visible {
+  box-shadow: 0 0 0 0.2rem var(--teal);
+}
+
+/* LOADING ANIMATION */
+#loading {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--whitesmoke);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: var(--loading-transition);
+}
+
+#loading .loading-bar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid var(--teal);
+  border-top-color: var(--transparent);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media (width < 1200px) {
+}
+
+@media (width < 1100px) and (height < 700px) {
+}
+
+@media (width < 800px) {
+}
