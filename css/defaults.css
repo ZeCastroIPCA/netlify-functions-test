@@ -48,8 +48,8 @@
   --font-weight-black: 900;
 
   /* BORDER RADIUS */
-  --border-radius-button: 10rem;
-  --border-radius-input: 1rem;
+  --border-radius-button: 0.1rem;
+  --border-radius-input: 0.1rem;
 
   /* TRANSITIONS */
   --fast-transition: 0.1s;
@@ -95,7 +95,7 @@ button {
 }
 
 button:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 button:active {
@@ -105,7 +105,7 @@ button:active {
 a,
 a:visited {
   text-decoration: none;
-  color: var(--teal);
+  color: var(--orange);
 }
 
 a:hover {
@@ -129,7 +129,7 @@ input {
 }
 
 input:focus-visible {
-  box-shadow: 0 0 0 0.2rem var(--teal);
+  box-shadow: 0 0 0 0.2rem var(--orange);
 }
 
 textarea {
