@@ -18,42 +18,22 @@ header h1 {
     font-size: 1.5rem;
 }
 
-.container {
+main {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 3rem 1rem;
 }
 
-.container label {
-    color: var(--gray);
-}
-
-.container input {
-    width: 100%;
-}
-
-.container button {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 1rem;
+button {
+    width: 100px;
+    padding: 0.5rem 1rem;
     background-color: var(--dark-gray);
     color: var(--whitesmoke);
-    border: none;
-    cursor: pointer;
 }
 
-.response {
-    width: 100%;
-    margin-top: 3rem;
-}
-
-.response h2 {
-    color: var(--dark-gray);
-    font-size: 1.5rem;
-    font-weight: var(--font-weight-semi-bold);
-    text-align: center;
-}
-
-.response p {
+#response {
     color: var(--light-gray);
     text-align: center;
 }

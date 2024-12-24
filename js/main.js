@@ -1,15 +1,11 @@
-async function getParameter(parameter) {
-  const response = await fetch('/.netlify/functions/getParameter?parameter=' + parameter);
-  const data = await response.json();
-  return data.message;
-}
+document.getElementById('callFunction').addEventListener('click', async () => {
+  const responseElement = document.getElementById('response');
 
-// when form is submitted, get the value of the input and call getParameter
-const form = document.getElementById('form');
-const parameter = document.getElementById('parameter').value;
-const response = document.getElementById('response');
-form.addEventListener('submit', async function (event) {
-  event.preventDefault();
-  const message = await getParameter(parameter);
-  response.innerText = message;
+  try {
+    const response = await fetch('/.netlify/functions/hello');
+    const data = await response.json();
+    responseElement.textContent = JSON.stringify(data, null, 2);
+  } catch (error) {
+    responseElement.textContent = `Error: ${error.message}`;
+  }
 });
