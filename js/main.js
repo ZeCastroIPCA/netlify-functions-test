@@ -1,4 +1,4 @@
-document.getElementById('callFunction').addEventListener('click', async () => {
+document.getElementById('call').addEventListener('click', async () => {
   const responseElement = document.getElementById('response');
 
   try {
